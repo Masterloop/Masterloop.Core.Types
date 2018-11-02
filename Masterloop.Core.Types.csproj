@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Masterloop.Core.Types</AssemblyName>
+    <RootNamespace>Masterloop.Core.Types</RootNamespace>
+    <Company>Masterloop</Company>
+    <Version>5.1.0</Version>
+    <Authors>Masterloop</Authors>
+    <Product>Masterloop Core Types Library</Product>
+    <Description>Core data types library for Masterloop Cloud Services.</Description>
+    <Copyright>Copyright (c) 2013-2018 Masterloop</Copyright>
+    <PackageProjectUrl>http://www.masterloop.com/</PackageProjectUrl>
+    <PackageLicenseUrl>http://masterloop.azurewebsites.net/Licenses/masterloop-mit-license.txt</PackageLicenseUrl>
+    <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
+    <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
+    <PackageReleaseNotes>Added support for Observation templating in ObservationSubscription.</PackageReleaseNotes>
+  </PropertyGroup>
+</Project>
