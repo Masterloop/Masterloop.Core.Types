@@ -20,6 +20,7 @@
     <Owners>jhskailand</Owners>
     <Summary>Core data types library for Masterloop Cloud Services.</Summary>
     <Title>Masterloop.Core.Types</Title>
+    <PackageId>Masterloop.Core.Types</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
