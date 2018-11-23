@@ -9,10 +9,22 @@
     <Product>Masterloop Core Types Library</Product>
     <Description>Core data types library for Masterloop Cloud Services.</Description>
     <Copyright>Copyright (c) 2013-2018 Masterloop</Copyright>
-    <PackageProjectUrl>http://www.masterloop.com/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Masterloop/Masterloop.Core.Types</PackageProjectUrl>
     <PackageLicenseUrl>http://masterloop.azurewebsites.net/Licenses/masterloop-mit-license.txt</PackageLicenseUrl>
     <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
     <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
-    <PackageReleaseNotes>Added support for Observation templating in ObservationSubscription.</PackageReleaseNotes>
+    <PackageReleaseNotes>Moved source to GitHub structure, with open source license</PackageReleaseNotes>
+    <ReleaseVersion>5.2.0</ReleaseVersion>
+    <PackageVersion>5.2.0</PackageVersion>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <Owners>jhskailand</Owners>
+    <Summary>Core data types library for Masterloop Cloud Services.</Summary>
+    <Title>Masterloop.Core.Types</Title>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+  </ItemGroup>
 </Project>
