@@ -7,5 +7,7 @@
         public double Longitude { get; set; }
 
         public double Altitude { get; set; }
+
+        public double Quality { get; set; }
     }
 }

@@ -42,6 +42,19 @@ namespace Masterloop.Core.Types.Base
             }
         }
 
+        public static bool IsDeviceObservationPackage(string routingKey)
+        {
+            string[] elements = routingKey.Split('.');
+            if (elements != null && elements.Length == 2)
+            {
+                return elements[1] == "OP";
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static bool IsDeviceCommand(string routingKey)
         {
             string[] elements = routingKey.Split('.');
@@ -94,6 +107,19 @@ namespace Masterloop.Core.Types.Base
             }
         }
 
+        public static bool IsSystemNotification(string routingKey)
+        {
+            string[] elements = routingKey.Split('.');
+            if (elements != null && elements.Length == 2)
+            {
+                return elements[0] == "SYS";
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static string ParseMID(string routingKey)
         {
             return ParseFirstString(routingKey);
@@ -126,6 +152,14 @@ namespace Masterloop.Core.Types.Base
         {
             string s = ParseLastString(routingKey);
             return Int32.Parse(s);
+        }
+
+        public static int ParseSystemNotification(string routingKey)
+        {
+            if (string.IsNullOrEmpty(routingKey)) return 0;
+            string[] elements = routingKey.Split('.');
+            if (elements.Length == 2) return 0;
+            return Int32.Parse(elements[1]);
         }
 
         private static string ParseFirstString(string routingKey)
