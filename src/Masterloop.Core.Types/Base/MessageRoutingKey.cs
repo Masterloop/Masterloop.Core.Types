@@ -29,6 +29,11 @@ namespace Masterloop.Core.Types.Base
             return string.Format("{0}.P.{1}", MID, sourceId);
         }
 
+        public static string GenerateSystemNotificationRoutingKey(int categoryId)
+        {
+            return string.Format("SYS.{0}", categoryId);
+        }
+
         public static bool IsDeviceObservation(string routingKey)
         {
             string[] elements = routingKey.Split('.');
@@ -158,7 +163,7 @@ namespace Masterloop.Core.Types.Base
         {
             if (string.IsNullOrEmpty(routingKey)) return 0;
             string[] elements = routingKey.Split('.');
-            if (elements.Length == 2) return 0;
+            if (elements.Length != 2) return 0;
             return Int32.Parse(elements[1]);
         }
 
