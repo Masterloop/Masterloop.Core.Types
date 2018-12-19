@@ -50,7 +50,7 @@ namespace Masterloop.Core.Types.Base
         public static bool IsDeviceObservationPackage(string routingKey)
         {
             string[] elements = routingKey.Split('.');
-            if (elements != null && elements.Length == 2)
+            if (elements != null && elements.Length == 3)
             {
                 return elements[1] == "OP";
             }
@@ -136,6 +136,14 @@ namespace Masterloop.Core.Types.Base
             string[] elements = routingKey.Split('.');
             if (elements.Length < 3) return 0;
             return Int32.Parse(elements[elements.Length - 1]);
+        }
+
+        public static string ParseObservationPackageType(string routingKey)
+        {
+            if (string.IsNullOrEmpty(routingKey)) return null;
+            string[] elements = routingKey.Split('.');
+            if (elements.Length < 3) return null;
+            return elements[2];
         }
 
         public static int ParseCommandId(string routingKey)
