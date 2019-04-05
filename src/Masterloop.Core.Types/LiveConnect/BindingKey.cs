@@ -22,6 +22,11 @@
             return string.Format("*.O.#");
         }
 
+        public static string GenerateObservationPackageBindingKey()
+        {
+            return string.Format("*.OP.#");
+        }
+
         public static string GenerateCommandBindingKey()
         {
             return string.Format("*.C.#");
@@ -40,6 +45,11 @@
         public static string GenerateDeviceObservationBindingKey(string MID)
         {
             return string.Format("{0}.O.#", MID);
+        }
+
+        public static string GenerateDeviceObservationPackageBindingKey(string MID)
+        {
+            return string.Format("{0}.OP.#", MID);
         }
 
         public static string GenerateDeviceCommandBindingKey(string MID)
