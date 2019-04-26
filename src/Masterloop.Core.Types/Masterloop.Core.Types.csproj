@@ -8,14 +8,14 @@
     <Authors>Masterloop</Authors>
     <Product>Masterloop Core Types Library</Product>
     <Description>Core data types library for Masterloop Cloud Services.</Description>
-    <Copyright>Copyright (c) 2013-2018 Masterloop</Copyright>
+    <Copyright>Copyright (c) 2013-2019 Masterloop</Copyright>
     <PackageProjectUrl>https://github.com/Masterloop/Masterloop.Core.Types</PackageProjectUrl>
     <PackageLicenseUrl>http://masterloop.azurewebsites.net/Licenses/masterloop-mit-license.txt</PackageLicenseUrl>
     <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
     <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
-    <PackageReleaseNotes>Moved source to GitHub structure, with open source license</PackageReleaseNotes>
+    <PackageReleaseNotes>Persistent subscription support</PackageReleaseNotes>
     <ReleaseVersion>5.2.0</ReleaseVersion>
-    <PackageVersion>5.2.0</PackageVersion>
+    <PackageVersion>5.5.0</PackageVersion>
     <DevelopmentDependency>true</DevelopmentDependency>
     <Owners>jhskailand</Owners>
     <Summary>Core data types library for Masterloop Cloud Services.</Summary>
