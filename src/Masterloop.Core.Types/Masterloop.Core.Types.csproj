@@ -14,7 +14,7 @@
     <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
     <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
     <PackageReleaseNotes>Persistent subscription support</PackageReleaseNotes>
-    <ReleaseVersion>5.2.0</ReleaseVersion>
+    <ReleaseVersion>5.5.0</ReleaseVersion>
     <PackageVersion>5.5.0</PackageVersion>
     <DevelopmentDependency>true</DevelopmentDependency>
     <Owners>jhskailand</Owners>
