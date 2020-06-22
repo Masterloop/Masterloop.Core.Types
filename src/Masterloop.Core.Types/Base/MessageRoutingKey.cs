@@ -34,6 +34,11 @@ namespace Masterloop.Core.Types.Base
             return string.Format("SYS.{0}", categoryId);
         }
 
+        public static string GenerateSystemPulseRoutingKey()
+        {
+            return string.Format("P");
+        }
+
         public static bool IsDeviceObservation(string routingKey)
         {
             string[] elements = routingKey.Split('.');
