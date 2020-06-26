@@ -17,5 +17,18 @@ namespace Masterloop.Core.Types.Observations
                 default: return null;
             }
         }
+
+        public static string ObservationToValueString(Observation o, DataType dataType)
+        {
+            switch (dataType)
+            {
+                case DataType.Boolean: return DataTypeStringConverter.FormatBoolean(((BooleanObservation)o).Value);
+                case DataType.Double: return DataTypeStringConverter.FormatDouble(((DoubleObservation)o).Value);
+                case DataType.Integer: return DataTypeStringConverter.FormatInteger(((IntegerObservation)o).Value);
+                case DataType.Position: return DataTypeStringConverter.FormatPosition(((PositionObservation)o).Value);
+                case DataType.String: return ((StringObservation)o).Value;
+                default: return null;
+            }
+        }
     }
 }
