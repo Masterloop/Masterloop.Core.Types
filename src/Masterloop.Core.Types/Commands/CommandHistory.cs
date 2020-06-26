@@ -1,14 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Masterloop.Core.Types.Commands
 {
     public class CommandHistory : Command
     {
+        public string OriginApplication { get; set; }
+
+        public string OriginAccount { get; set; }
+
+        public string OriginIP { get; set; }
+
+        public string OriginReference { get; set; }
+
         public DateTime? DeliveredAt { get; set; }
 
         public bool? WasAccepted { get; set; }
+
+        public int? ResultCode { get; set; }
+
+        public string Comment { get; set; }
 
         public CommandStatus Status
         {
