@@ -8,7 +8,7 @@ namespace Masterloop.Core.Types.Commands
 
         public string OriginAccount { get; set; }
 
-        public string OriginIP { get; set; }
+        public string OriginAddress { get; set; }
 
         public string OriginReference { get; set; }
 
