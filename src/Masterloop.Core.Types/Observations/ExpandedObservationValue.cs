@@ -43,6 +43,11 @@ namespace Masterloop.Core.Types.Observations
             return Value;
         }
 
+        public DescriptiveStatistics ToStatistics()
+        {
+            return DataTypeStringConverter.ParseStatisticsValue(Value);
+        }
+
         public Observation ToObservation()
         {
             switch (DataType)
@@ -52,6 +57,7 @@ namespace Masterloop.Core.Types.Observations
                 case DataType.Integer: return new IntegerObservation() { Timestamp = this.Timestamp, Value = ToInteger() };
                 case DataType.Position: return new PositionObservation() { Timestamp = this.Timestamp, Value = ToPosition() };
                 case DataType.String: return new StringObservation() { Timestamp = this.Timestamp, Value = ToString() };
+                case DataType.Statistics: return new StatisticsObservation() { Timestamp = this.Timestamp, Value = ToStatistics() };
                 default: return null;
             }
         }

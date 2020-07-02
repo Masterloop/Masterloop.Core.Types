@@ -8,6 +8,6 @@
 
         public double Altitude { get; set; }
 
-        public double Quality { get; set; }
+        public double? DOP { get; set; }
     }
 }

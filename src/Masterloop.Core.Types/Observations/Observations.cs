@@ -8,11 +8,6 @@ namespace Masterloop.Core.Types.Observations
         public DateTime Timestamp { get; set; }
     }
 
-    public class BinaryObservation : Observation
-    {
-        public Binary Value { get; set; }
-    }
-
     public class BooleanObservation : Observation
     {
         public bool Value { get; set; }
@@ -36,5 +31,10 @@ namespace Masterloop.Core.Types.Observations
     public class StringObservation : Observation
     {
         public string Value { get; set; }
+    }
+
+    public class StatisticsObservation : Observation
+    {
+        public DescriptiveStatistics Value { get; set; }
     }
 }
