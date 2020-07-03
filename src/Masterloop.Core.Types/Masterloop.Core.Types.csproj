@@ -4,7 +4,7 @@
     <AssemblyName>Masterloop.Core.Types</AssemblyName>
     <RootNamespace>Masterloop.Core.Types</RootNamespace>
     <Company>Masterloop</Company>
-    <Version>5.1.0</Version>
+    <Version>6.0.0</Version>
     <Authors>Masterloop</Authors>
     <Product>Masterloop Core Types Library</Product>
     <Description>Core data types library for Masterloop Cloud Services.</Description>
