@@ -12,6 +12,8 @@ namespace Masterloop.Core.Types.Commands
 
         public string OriginReference { get; set; }
 
+        public DateTime? CreatedOn { get; set; }
+
         public DateTime? DeliveredAt { get; set; }
 
         public bool? WasAccepted { get; set; }
