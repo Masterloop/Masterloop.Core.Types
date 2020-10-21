@@ -7,6 +7,7 @@
         Double = 3,
         Integer = 4,
         Position = 5,
-        String = 6
+        String = 6,
+        Statistics = 7
     }
 }

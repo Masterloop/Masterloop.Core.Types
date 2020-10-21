@@ -12,6 +12,8 @@ namespace Masterloop.Core.Types.Devices
 
         public string Revision { get; set; }
 
+        public DeviceProtocolType Protocol { get; set; }
+
         public DeviceObservation[] Observations { get; set; }
 
         public DeviceCommand[] Commands { get; set; }

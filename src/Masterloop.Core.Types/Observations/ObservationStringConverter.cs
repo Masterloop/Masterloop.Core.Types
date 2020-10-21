@@ -14,6 +14,7 @@ namespace Masterloop.Core.Types.Observations
                 case DataType.Integer: return new IntegerObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParseIntegerValue(value) };
                 case DataType.Position: return new PositionObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParsePositionValue(value) };
                 case DataType.String: return new StringObservation() { Timestamp = timestamp, Value = value };
+                case DataType.Statistics: return new StatisticsObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParseStatisticsValue(value) };
                 default: return null;
             }
         }
@@ -27,6 +28,7 @@ namespace Masterloop.Core.Types.Observations
                 case DataType.Integer: return DataTypeStringConverter.FormatInteger(((IntegerObservation)o).Value);
                 case DataType.Position: return DataTypeStringConverter.FormatPosition(((PositionObservation)o).Value);
                 case DataType.String: return ((StringObservation)o).Value;
+                case DataType.Statistics: return DataTypeStringConverter.FormatStatistics(((StatisticsObservation)o).Value);
                 default: return null;
             }
         }

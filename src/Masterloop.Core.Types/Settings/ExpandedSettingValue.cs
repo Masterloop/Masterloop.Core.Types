@@ -1,6 +1,4 @@
 ﻿using Masterloop.Core.Types.Base;
-using System;
-using System.Globalization;
 
 namespace Masterloop.Core.Types.Settings
 {

@@ -7,6 +7,7 @@
         public const string IntegerObservation = "Integer";
         public const string StringObservation = "String";
         public const string PositionObservation = "Position";
+        public const string StatisticsObservation = "Statistics";
 
         public const string Command = "Command";
         public const string CommandResponse = "CommandResponse";

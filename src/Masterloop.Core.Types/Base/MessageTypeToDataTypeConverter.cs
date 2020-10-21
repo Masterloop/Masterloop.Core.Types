@@ -14,6 +14,7 @@ namespace Masterloop.Core.Types.Base
                 case MessageDataType.IntegerObservation: return DataType.Integer;
                 case MessageDataType.PositionObservation: return DataType.Position;
                 case MessageDataType.StringObservation: return DataType.String;
+                case MessageDataType.StatisticsObservation: return DataType.Statistics;
                 default: throw new ArgumentException("Cannot convert MessageDataType of this type to DataType: " + mdt.ToString());
             }
         }
@@ -27,6 +28,7 @@ namespace Masterloop.Core.Types.Base
                 case DataType.Integer: return MessageDataType.IntegerObservation;
                 case DataType.Position: return MessageDataType.PositionObservation;
                 case DataType.String: return MessageDataType.StringObservation;
+                case DataType.Statistics: return MessageDataType.StatisticsObservation;
                 default: throw new ArgumentException("Cannot convert MessageDataType of this DataType: " + dt.ToString());
             }
         }

@@ -4,18 +4,18 @@
     <AssemblyName>Masterloop.Core.Types</AssemblyName>
     <RootNamespace>Masterloop.Core.Types</RootNamespace>
     <Company>Masterloop</Company>
-    <Version>5.1.0</Version>
+    <Version>6.0.0</Version>
     <Authors>Masterloop</Authors>
     <Product>Masterloop Core Types Library</Product>
     <Description>Core data types library for Masterloop Cloud Services.</Description>
-    <Copyright>Copyright (c) 2013-2019 Masterloop</Copyright>
+    <Copyright>Copyright (c) 2013 Masterloop</Copyright>
     <PackageProjectUrl>https://github.com/Masterloop/Masterloop.Core.Types</PackageProjectUrl>
     <PackageLicenseUrl>http://masterloop.azurewebsites.net/Licenses/masterloop-mit-license.txt</PackageLicenseUrl>
     <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
     <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
-    <PackageReleaseNotes>Persistent subscription support</PackageReleaseNotes>
-    <ReleaseVersion>5.5.0</ReleaseVersion>
-    <PackageVersion>5.5.0</PackageVersion>
+    <PackageReleaseNotes>Extended snapshot requests, Devicelets</PackageReleaseNotes>
+    <ReleaseVersion>6.2.0</ReleaseVersion>
+    <PackageVersion>6.2.0</PackageVersion>
     <DevelopmentDependency>true</DevelopmentDependency>
     <Owners>jhskailand</Owners>
     <Summary>Core data types library for Masterloop Cloud Services.</Summary>
@@ -32,7 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2"><PrivateAssets>all</PrivateAssets>
+<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+</PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove=".DS_Store" />

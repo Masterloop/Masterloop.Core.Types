@@ -85,6 +85,10 @@ namespace Masterloop.Core.Types.Observations
                                         {
                                             throw new ArgumentException("String values longer than 4096 characters are not supported. Tip: Use binary observation instead.");
                                         }
+                                    case DataType.Statistics:
+                                        DescriptiveStatistics statisticsValue = DataTypeStringConverter.ParseStatisticsValue(value);
+                                        AppendObservation(id, new StatisticsObservation() { Timestamp = timestamp, Value = statisticsValue });
+                                        break;
                                     default:
                                         throw new ArgumentException("Unsupported datatype in line\n" + line);
                                 }
@@ -161,6 +165,7 @@ namespace Masterloop.Core.Types.Observations
                     else if (o is IntegerObservation) value = DataTypeStringConverter.FormatInteger(((IntegerObservation)(o)).Value);
                     else if (o is PositionObservation) value = DataTypeStringConverter.FormatPosition(((PositionObservation)(o)).Value);
                     else if (o is StringObservation) value = ((StringObservation)(o)).Value;
+                    else if (o is StatisticsObservation) value = DataTypeStringConverter.FormatStatistics(((StatisticsObservation)(o)).Value);
                     else throw new NotSupportedException("Unsupported observation data type: " + o.GetType().ToString());
                     string line = string.Format("{0},{1},{2}\r\n", io.ObservationId, o.Timestamp.ToString("o"), value);
                     sb.Append(line);
