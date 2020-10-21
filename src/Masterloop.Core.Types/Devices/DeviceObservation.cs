@@ -1,5 +1,4 @@
 ﻿using Masterloop.Core.Types.Base;
-using Masterloop.Core.Types.Observations;
 
 namespace Masterloop.Core.Types.Devices
 {
@@ -13,6 +12,6 @@ namespace Masterloop.Core.Types.Devices
 
         public DataType DataType { get; set; }
 
-        public int ExpectedLoggingInterval { get; set; }
+        public HistorianType Historian { get; set; }
     }
 }
