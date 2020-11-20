@@ -13,17 +13,24 @@
     <PackageLicenseUrl>http://masterloop.azurewebsites.net/Licenses/masterloop-mit-license.txt</PackageLicenseUrl>
     <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
     <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
-    <PackageReleaseNotes>Statistics data types.
-Command metadata.</PackageReleaseNotes>
-    <ReleaseVersion>6.0.0</ReleaseVersion>
-    <PackageVersion>6.0.0</PackageVersion>
+    <PackageReleaseNotes>Extended snapshot requests, Devicelets</PackageReleaseNotes>
+    <ReleaseVersion>6.2.0</ReleaseVersion>
+    <PackageVersion>6.2.0</PackageVersion>
     <DevelopmentDependency>true</DevelopmentDependency>
     <Owners>jhskailand</Owners>
     <Summary>Core data types library for Masterloop Cloud Services.</Summary>
     <Title>Masterloop.Core.Types</Title>
     <PackageId>Masterloop.Core.Types</PackageId>
     <SynchReleaseVersion>false</SynchReleaseVersion>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2"><PrivateAssets>all</PrivateAssets>
 <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -23,7 +23,21 @@ namespace Masterloop.Core.Types.Base
 
         public static string FormatPosition(Position value)
         {
-            return string.Format("{0},{1},{2}", value.Latitude.ToString(CultureInfo.InvariantCulture), value.Longitude.ToString(CultureInfo.InvariantCulture), value.Altitude.ToString(CultureInfo.InvariantCulture));
+            if (value.Altitude.HasValue)
+            {
+                if (value.DOP.HasValue)
+                {
+                    return string.Format("{0},{1},{2},{3}", value.Latitude.ToString(CultureInfo.InvariantCulture), value.Longitude.ToString(CultureInfo.InvariantCulture), value.Altitude.Value.ToString(CultureInfo.InvariantCulture), value.DOP.Value.ToString(CultureInfo.InvariantCulture));
+                }
+                else
+                {
+                    return string.Format("{0},{1},{2}", value.Latitude.ToString(CultureInfo.InvariantCulture), value.Longitude.ToString(CultureInfo.InvariantCulture), value.Altitude.Value.ToString(CultureInfo.InvariantCulture));
+                }
+            }
+            else
+            {
+                return string.Format("{0},{1}", value.Latitude.ToString(CultureInfo.InvariantCulture), value.Longitude.ToString(CultureInfo.InvariantCulture));
+            }
         }
 
         public static string FormatStatistics(DescriptiveStatistics value)
@@ -32,15 +46,15 @@ namespace Masterloop.Core.Types.Base
                 $"{value.Count}," +
                 $"{value.Mean.ToString(CultureInfo.InvariantCulture)}," +
                 $"{value.Minimum.ToString(CultureInfo.InvariantCulture)}," +
-                $"{value.Maximum.ToString(CultureInfo.InvariantCulture)}";
+                $"{value.Maximum.ToString(CultureInfo.InvariantCulture)},";
             if (value.From.HasValue)
             {
-                s += $"{value.From:o}";
+                s += $"{value.From.Value.ToUniversalTime():o}";
             }
             s += ",";
             if (value.To.HasValue)
             {
-                s += $"{value.To:o}";
+                s += $"{value.To.Value.ToUniversalTime():o}";
             }
             s += ",";
             if (value.StdDev.HasValue)
@@ -106,8 +120,7 @@ namespace Masterloop.Core.Types.Base
                             return new Position()
                             {
                                 Latitude = lat,
-                                Longitude = lon,
-                                Altitude = double.NaN
+                                Longitude = lon
                             };
                         }
                         else
@@ -130,6 +143,30 @@ namespace Masterloop.Core.Types.Base
                                 Latitude = lat,
                                 Longitude = lon,
                                 Altitude = alt
+                            };
+                        }
+                        else
+                        {
+                            throw new ArgumentOutOfRangeException("Position value out of range: " + value);
+                        }
+                    }
+                }
+                else if (values.Length == 4 && values[0] != null && values[0].Length > 0 && values[1] != null && values[1].Length > 0 && values[2] != null && values[2].Length > 0 && values[3] != null && values[3].Length > 0)  // lat,lon,alt,dop
+                {
+                    double lat, lon, alt, dop;
+                    if (double.TryParse(values[0], NumberStyles.Float, CultureInfo.InvariantCulture, out lat) &&
+                        double.TryParse(values[1], NumberStyles.Float, CultureInfo.InvariantCulture, out lon) &&
+                        double.TryParse(values[2], NumberStyles.Float, CultureInfo.InvariantCulture, out alt) &&
+                        double.TryParse(values[3], NumberStyles.Float, CultureInfo.InvariantCulture, out dop))
+                    {
+                        if (lat >= -90.0 && lat <= 90.0 && lon >= -180.0 && lon <= 180.0)
+                        {
+                            return new Position()
+                            {
+                                Latitude = lat,
+                                Longitude = lon,
+                                Altitude = alt,
+                                DOP = dop
                             };
                         }
                         else
