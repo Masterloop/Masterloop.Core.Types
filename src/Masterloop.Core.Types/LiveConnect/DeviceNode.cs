@@ -2,10 +2,9 @@
 {
     public class DeviceNode
     {
-        public int Port { get; set; }
-        public string Server { get; set; }
-        public bool UseEncryption { get; set; }
-        public string Username { get; set; }
+        public int PortUnencrypted { get; set; }
+        public int PortEncrypted { get; set; }
+        public string HostName { get; set; }
     }
 
     public class DeviceNodeAMQP : DeviceNode
@@ -17,8 +16,5 @@
 
     public class DeviceNodeMQTT : DeviceNode
     {
-        public string PubRoot { get; set; }
-        public string SubRoot { get; set; }
-        public string MasterPulse { get; set; }
     }
 }
