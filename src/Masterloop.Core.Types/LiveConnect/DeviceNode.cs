@@ -2,16 +2,19 @@
 {
     public class DeviceNode
     {
-        public int PortUnencrypted { get; set; }
-        public int PortEncrypted { get; set; }
-        public string HostName { get; set; }
+        public string APIHost { get; set; }
+        public int APIPortUEnc { get; set; }
+        public int APIPortEnc { get; set; }
+        public string MQHost { get; set; }
+        public int MQPortUEnc { get; set; }
+        public int MQPortEnc { get; set; }
     }
 
     public class DeviceNodeAMQP : DeviceNode
     {
-        public string VHost { get; set; }
-        public string Queue { get; set; }
-        public string Exchange { get; set; }
+        public string AMQPVHost { get; set; }
+        public string AMQPQueue { get; set; }
+        public string AMQPExchange { get; set; }
     }
 
     public class DeviceNodeMQTT : DeviceNode
