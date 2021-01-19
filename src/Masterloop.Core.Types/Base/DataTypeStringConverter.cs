@@ -188,8 +188,8 @@ namespace Masterloop.Core.Types.Base
                 stats.Mean = double.Parse(values[1], CultureInfo.InvariantCulture);
                 stats.Minimum = double.Parse(values[2], CultureInfo.InvariantCulture);
                 stats.Maximum = double.Parse(values[3], CultureInfo.InvariantCulture);
-                if (values[4] != null && values[4].Length > 0) stats.From = DateTime.Parse(values[4], CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
-                if (values[5] != null && values[5].Length > 0) stats.To = DateTime.Parse(values[5], CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
+                if (values[4] != null && values[4].Length > 0) stats.From = DateTime.Parse(values[4], CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime();
+                if (values[5] != null && values[5].Length > 0) stats.To = DateTime.Parse(values[5], CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime();
                 if (values[6] != null && values[6].Length > 0) stats.StdDev = double.Parse(values[6], CultureInfo.InvariantCulture);
                 if (values[7] != null && values[7].Length > 0) stats.Median = double.Parse(values[7], CultureInfo.InvariantCulture);
                 return stats;

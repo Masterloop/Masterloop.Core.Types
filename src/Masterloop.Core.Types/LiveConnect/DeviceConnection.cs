@@ -1,6 +1,4 @@
-﻿using Masterloop.Core.Types.Devices;
-using Masterloop.Core.Types.Settings;
-using System;
+﻿using System;
 
 namespace Masterloop.Core.Types.LiveConnect
 {
@@ -8,6 +6,6 @@ namespace Masterloop.Core.Types.LiveConnect
     {
         public DateTime ServerTime { get; set; }
         public DeviceNode Node { get; set; }
-        public SettingsPackage Settings { get; set; }
+        public UInt16 BackoffSeconds { get; set; }
     }
 }
