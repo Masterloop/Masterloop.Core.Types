@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Masterloop.Core.Types.Firmware
+﻿namespace Masterloop.Core.Types.Firmware
 {
     public class FirmwareRelease
     {
@@ -10,6 +6,11 @@ namespace Masterloop.Core.Types.Firmware
         /// Template identifier which the firmware belongs to.
         /// </summary>
         public string DeviceTemplateId { get; set; }
+
+        /// <summary>
+        /// Firmware variant identifier (optional).
+        /// </summary>
+        public int? VariantId { get; set; }
 
         /// <summary>
         /// User version string.

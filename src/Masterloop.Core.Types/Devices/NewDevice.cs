@@ -6,6 +6,8 @@ namespace Masterloop.Core.Types.Devices
     {
         public string TemplateId { get; set; }
 
+        public int? FirmwareVariantId { get; set; }
+
         public string MID { get; set; }
 
         public string Name { get; set; }
