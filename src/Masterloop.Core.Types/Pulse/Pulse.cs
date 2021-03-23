@@ -7,5 +7,6 @@ namespace Masterloop.Core.Types.Pulse
         public DateTime Timestamp { get; set; }
         public string MID { get; set; }
         public int PulseId { get; set; }
+        public PulseCategory Category { get; set; }
     }
 }
