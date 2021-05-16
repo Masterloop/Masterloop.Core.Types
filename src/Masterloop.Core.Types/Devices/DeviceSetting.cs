@@ -9,6 +9,8 @@ namespace Masterloop.Core.Types.Devices
 
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         public DataType DataType { get; set; }
 
         public bool IsRequired { get; set; }
