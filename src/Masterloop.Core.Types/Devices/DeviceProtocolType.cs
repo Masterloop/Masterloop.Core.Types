@@ -5,6 +5,7 @@
         None = 0,
         HTTP = 1,
         AMQP = 2,
-        MQTT = 3
+        MQTT = 3,
+        ALL = 4
     }
 }
