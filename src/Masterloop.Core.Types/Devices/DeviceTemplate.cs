@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Masterloop.Core.Types.Devices
+﻿namespace Masterloop.Core.Types.Devices
 {
     public class DeviceTemplate
     {
@@ -15,6 +13,8 @@ namespace Masterloop.Core.Types.Devices
         public DeviceProtocolType Protocol { get; set; }
 
         public DeviceObservation[] Observations { get; set; }
+
+        public DeviceObservationPackage[] ObservationPackages { get; set; }
 
         public DeviceCommand[] Commands { get; set; }
 
