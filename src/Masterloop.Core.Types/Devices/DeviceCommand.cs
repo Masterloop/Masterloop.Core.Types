@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Masterloop.Core.Types.Devices
+﻿namespace Masterloop.Core.Types.Devices
 {
     public class DeviceCommand
     {

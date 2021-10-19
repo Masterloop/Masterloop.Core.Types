@@ -38,11 +38,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove=".DS_Store" />
-    <None Remove="Units\" />
-    <None Remove="Units\Enum\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Units\" />
-    <Folder Include="Units\Enum\" />
   </ItemGroup>
 </Project>

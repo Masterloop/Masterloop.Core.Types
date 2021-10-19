@@ -1,4 +1,6 @@
-﻿namespace Masterloop.Core.Types.Devices
+﻿using Masterloop.Core.Types.Base;
+
+namespace Masterloop.Core.Types.Devices
 {
     public class DeviceTemplate
     {
@@ -21,5 +23,7 @@
         public DeviceSetting[] Settings { get; set; }
 
         public DevicePulse[] Pulses { get; set; }
+
+        public EnumerationGroup[] EnumerationGroups { get; set; }
     }
 }

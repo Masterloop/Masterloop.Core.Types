@@ -1,5 +1,4 @@
 ﻿using Masterloop.Core.Types.Base;
-using System;
 
 namespace Masterloop.Core.Types.Devices
 {
@@ -10,5 +9,9 @@ namespace Masterloop.Core.Types.Devices
         public string Name { get; set; }
 
         public DataType DataType { get; set; }
+
+        public int Quantity { get; set; }
+
+        public int Unit { get; set; }
     }
 }

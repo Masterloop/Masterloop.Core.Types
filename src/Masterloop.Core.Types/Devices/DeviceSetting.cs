@@ -13,6 +13,10 @@ namespace Masterloop.Core.Types.Devices
 
         public DataType DataType { get; set; }
 
+        public int Quantity { get; set; }
+
+        public int Unit { get; set; }
+
         public bool IsRequired { get; set; }
 
         public string DefaultValue { get; set; }
