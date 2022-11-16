@@ -6,6 +6,11 @@ namespace Masterloop.Core.Types.Base
     public class DataTypeStringConverter
     {
         #region Formatters
+        public static string FormatBinary(byte[] value)
+        {
+            return Convert.ToBase64String(value);
+        }
+
         public static string FormatBoolean(bool value)
         {
             return (value) ? "1" : "0";
@@ -71,6 +76,11 @@ namespace Masterloop.Core.Types.Base
         #endregion
 
         #region Parsers
+        public static byte[] ParseBinaryValue(string value)
+        {
+            return Convert.FromBase64String(value);
+        }
+
         public static bool ParseBooleanValue(string value)
         {
             if (value.Length == 1)
