@@ -8,6 +8,11 @@ namespace Masterloop.Core.Types.Observations
         public DateTime Timestamp { get; set; }
     }
 
+    public class BinaryObservation : Observation
+    {
+        public byte[] Value { get; set; }
+    }
+
     public class BooleanObservation : Observation
     {
         public bool Value { get; set; }

@@ -14,6 +14,8 @@ namespace Masterloop.Core.Types.Devices
 
         public HistorianType Historian { get; set; }
 
+        public double HistorianStep { get; set; }
+
         public int Quantity { get; set; }
 
         public int Unit { get; set; }

@@ -4,7 +4,7 @@
     {
         All = 0,
         None = 1,
-        HourlyStatistics = 2,
-        DailyStatistics = 3
+        TimeRangeStatistics = 2,
+        SampleCountStatistics = 3
     }
 }
