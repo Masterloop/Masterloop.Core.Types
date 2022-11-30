@@ -2,6 +2,7 @@
 {
     public class MessageDataType
     {
+        public const string BinaryObservation = "Binary";
         public const string BooleanObservation = "Boolean";
         public const string DoubleObservation = "Double";
         public const string IntegerObservation = "Integer";

@@ -13,9 +13,9 @@
     <PackageLicenseUrl>http://masterloop.azurewebsites.net/Licenses/masterloop-mit-license.txt</PackageLicenseUrl>
     <PackageIconUrl>http://masterloop.azurewebsites.net/Images/Masterloop_Symbol_Square_32x32.png</PackageIconUrl>
     <PackageTags>Masterloop Core Types .NET Standard Library</PackageTags>
-    <PackageReleaseNotes>Support for DeviceNode, DevConnect and NewDevice structures.</PackageReleaseNotes>
-    <ReleaseVersion>6.3.0</ReleaseVersion>
-    <PackageVersion>6.3.0</PackageVersion>
+    <PackageReleaseNotes>Added Getters/Setters to classes missing that. Cleaned up dependencies. Added support for Binary observation types.</PackageReleaseNotes>
+    <ReleaseVersion>6.5.3</ReleaseVersion>
+    <PackageVersion>6.5.3</PackageVersion>
     <DevelopmentDependency>true</DevelopmentDependency>
     <Owners>jhskailand</Owners>
     <Summary>Core data types library for Masterloop Cloud Services.</Summary>
@@ -27,16 +27,12 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2"><PrivateAssets>all</PrivateAssets>
-<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-</PackageReference>
-  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove=".DS_Store" />
+    <None Remove="NuGet.Build.Packaging" />
+    <None Remove="Microsoft.SourceLink.GitHub" />
   </ItemGroup>
 </Project>

@@ -18,6 +18,11 @@ namespace Masterloop.Core.Types.Observations
             this.Value = ObservationStringConverter.ObservationToValueString(observation, dataType);
         }
 
+        public byte[] ToBinary()
+        {
+            return DataTypeStringConverter.ParseBinaryValue(Value);
+        }
+
         public bool ToBoolean()
         {
             return DataTypeStringConverter.ParseBooleanValue(Value);
@@ -52,6 +57,7 @@ namespace Masterloop.Core.Types.Observations
         {
             switch (DataType)
             {
+                case DataType.Binary: return new BinaryObservation() { Timestamp = this.Timestamp, Value = ToBinary() };
                 case DataType.Boolean: return new BooleanObservation() { Timestamp = this.Timestamp, Value = ToBoolean() };
                 case DataType.Double: return new DoubleObservation() { Timestamp = this.Timestamp, Value = ToDouble() };
                 case DataType.Integer: return new IntegerObservation() { Timestamp = this.Timestamp, Value = ToInteger() };

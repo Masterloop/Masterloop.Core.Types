@@ -2,20 +2,20 @@
 {
     public class LiveConnectionDetails
     {
-        public string Server;
+        public string Server { get; set; }
 
-        public int Port;
+        public int Port { get; set; }
 
-        public bool UseSsl;
+        public bool UseSsl { get; set; }
 
-        public string VirtualHost;
+        public string VirtualHost { get; set; }
 
-        public string Username;
+        public string Username { get; set; }
 
-        public string Password;
+        public string Password { get; set; }
 
-        public string QueueName;
+        public string QueueName { get; set; }
 
-        public string ExchangeName;
+        public string ExchangeName { get; set; }
     }
 }

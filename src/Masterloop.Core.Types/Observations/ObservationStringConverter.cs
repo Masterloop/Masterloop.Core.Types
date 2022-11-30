@@ -9,6 +9,7 @@ namespace Masterloop.Core.Types.Observations
         {
             switch (dataType)
             {
+                case DataType.Binary: return new BinaryObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParseBinaryValue(value) };
                 case DataType.Boolean: return new BooleanObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParseBooleanValue(value) };
                 case DataType.Double: return new DoubleObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParseDoubleValue(value) };
                 case DataType.Integer: return new IntegerObservation() { Timestamp = timestamp, Value = DataTypeStringConverter.ParseIntegerValue(value) };
@@ -23,6 +24,7 @@ namespace Masterloop.Core.Types.Observations
         {
             switch (dataType)
             {
+                case DataType.Binary: return DataTypeStringConverter.FormatBinary(((BinaryObservation)o).Value);
                 case DataType.Boolean: return DataTypeStringConverter.FormatBoolean(((BooleanObservation)o).Value);
                 case DataType.Double: return DataTypeStringConverter.FormatDouble(((DoubleObservation)o).Value);
                 case DataType.Integer: return DataTypeStringConverter.FormatInteger(((IntegerObservation)o).Value);

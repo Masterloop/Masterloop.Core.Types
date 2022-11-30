@@ -5,11 +5,11 @@
         /// <summary>
         /// Template identifier, use either TID or MID (not both).
         /// </summary>
-        public string TID;
+        public string TID { get; set; }
 
         /// <summary>
         /// Device identifier, use either TID or MID (not both).
         /// </summary>
-        public string MID;
+        public string MID { get; set; }
     }
 }
